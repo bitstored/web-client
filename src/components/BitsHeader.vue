@@ -1,38 +1,44 @@
 <template>
   <header slot="toolbar">
-    <div class="header-banner">
+    <div class="header-banner" id="header-fixed">
       <div class="row">
         <div class="col-md-4">
-          <img id="logo" src="../assets/logo.png" alt="BitStored logo">
+          <img id="logo-fixed" src="../assets/logo.png" alt="BitStored logo">
         </div>
-        <div class="col-md-4">Secure solution to store your data</div>
+        <div class="col-md-8">
+          <h3>Secure solution to store your data</h3>
+        </div>
       </div>
     </div>
     <div class="clear"></div>
     <div class="header-nav" id="header-nav">
-      <div class="header-title" id="header-title">BitStored</div>
+      <div class="header-title" id="header-title">
+        <img id="logo" src="../assets/logo.png" alt="BitStored logo">
+      </div>
     </div>
   </header>
-
 </template>
 
 <script>
-document.addEventListener('scroll', () => {
+document.addEventListener("scroll", () => {
   if (document.documentElement.scrollTop >= 100) {
-    document.getElementById('header-nav').classList.add('fixed-header')
-    document.getElementById('header-title').classList.add('visible-title')
+    document.getElementById("header-nav").classList.add("fixed-header");
+    document.getElementById("header-title").classList.add("visible-title");
   } else {
-    document.getElementById('header-nav').classList.remove('fixed-header')
-    document.getElementById('header-title').classList.remove('visible-title')
+    document.getElementById("header-nav").classList.remove("fixed-header");
+    document.getElementById("header-title").classList.remove("visible-title");
   }
-})
+});
 
 export default {
-  name: 'BitsHeader'
-}
+  name: "BitsHeader"
+};
 </script>
 
 <style>
+header {
+  width: 100%;
+}
 .header-banner {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -42,7 +48,7 @@ export default {
   width: 100%;
   align-content: flex-start;
   background-color: #eeeeee;
-  height: 100px;
+  height: 65px;
 }
 .fixed-header {
   position: fixed;
@@ -66,10 +72,23 @@ export default {
 .visible-title {
   visibility: visible !important;
 }
+
 #logo {
   max-width: 300px;
   height: auto;
   align-self: flex-start;
   position: relative;
+}
+#logo-fixed {
+  max-width: 300px;
+  height: auto;
+  align-self: flex-start;
+  left: 4%;
+  top: 6%;
+  position: relative;
+}
+h3 {
+  align-content: center;
+  color: #555555;
 }
 </style>

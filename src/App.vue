@@ -10,16 +10,16 @@
 </template>
 
 <script>
-import FirstPage from './pages/FirstPage'
-import DefaultLayout from './layouts/DefaultLayout'
+import FirstPage from "./pages/FirstPage";
+import DefaultLayout from "./layouts/DefaultLayout";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     FirstPage,
     DefaultLayout
   }
-}
+};
 </script>
 
 <style>
@@ -34,10 +34,7 @@ body {
   text-align: center;
   color: #2c3e50;
 }
-#logo {
-  max-width: 30%;
-  height: auto;
-}
+
 .catalog {
   display: flex;
 }
