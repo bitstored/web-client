@@ -20,19 +20,21 @@
 </template>
 
 <script>
-document.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop >= 100) {
-    document.getElementById("header-nav").classList.add("fixed-header");
-    document.getElementById("header-title").classList.add("visible-title");
+document.addEventListener('scroll', () => {
+  if (document.documentElement.scrollTop >= 90) {
+    document.getElementById('header-nav').classList.add('fixed-header')
+    document.getElementById('header-title').classList.add('visible-title')
+    document.getElementById('sidebar').style.top = '60px'
   } else {
-    document.getElementById("header-nav").classList.remove("fixed-header");
-    document.getElementById("header-title").classList.remove("visible-title");
+    document.getElementById('header-nav').classList.remove('fixed-header')
+    document.getElementById('header-title').classList.remove('visible-title')
+    document.getElementById('sidebar').style.top = '0'
   }
-});
+})
 
 export default {
-  name: "BitsHeader"
-};
+  name: 'BitsHeader'
+}
 </script>
 
 <style>

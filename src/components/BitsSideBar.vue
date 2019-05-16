@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "BitsSideBar"
+  name: 'BitsSideBar'
 };
 </script>
 
@@ -22,13 +22,13 @@ export default {
 nav {
   white-space: nowrap;
   background: #37474f;
+  position: sticky;
+  top: 0;
 }
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: sticky;
-  top: 0;
 }
 nav ul li a {
   display: block;
