@@ -7,6 +7,6 @@ export default new Router({
   routes: [{
     path: '/',
     name: 'home',
-    components: require("../App.vue").default
+    components: require('../App.vue').default
   }]
 })

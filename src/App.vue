@@ -10,26 +10,29 @@
 </template>
 
 <script>
-import FirstPage from "./pages/FirstPage";
-import DefaultLayout from "./layouts/DefaultLayout";
+import FirstPage from './pages/FirstPage'
+import DefaultLayout from './layouts/DefaultLayout'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     FirstPage,
     DefaultLayout
   }
-};
+}
 </script>
 
 <style>
-#app {
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin-top: 0;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 #logo {
   max-width: 30%;

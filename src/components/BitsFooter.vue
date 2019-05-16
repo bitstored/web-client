@@ -8,12 +8,13 @@
 
 <script>
 export default {
-  name: "BitsFooter"
-};
+  name: 'BitsFooter'
+}
 </script>
 
 <style>
 #footer {
+  left: 0;
   padding: 0 0 10px 0;
   margin: 0;
   position: absolute;
