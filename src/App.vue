@@ -1,27 +1,33 @@
 
 <template>
-  <default-layout>
-    <div class="Home">
-      <div class="container">
-        <first-page></first-page>
+  <vue-ads-layout
+    :full-bar="false"
+  >
+    <default-layout>
+      <div class="Home">
+        <div class="container">
+          <router-view></router-view>
+        </div>
       </div>
-    </div>
-  </default-layout>
+    </default-layout>
+  </vue-ads-layout>
 </template>
 
 <script>
-import FirstPage from "./pages/FirstPage";
-import About from "./pages/About";
+import { VueAdsLayout } from 'vue-ads-layout'
+import FirstPage from './pages/FirstPage'
+import About from './pages/About'
 
-import DefaultLayout from "./layouts/DefaultLayout";
+import DefaultLayout from './layouts/DefaultLayout'
 export default {
-  name: "App",
+  name: 'App',
   components: {
     FirstPage,
     DefaultLayout,
-    About
+    About,
+    VueAdsLayout
   }
-};
+}
 </script>
 
 <style>

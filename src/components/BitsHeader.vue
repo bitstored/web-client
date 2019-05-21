@@ -3,7 +3,7 @@
     <div class="header-banner" id="header-fixed">
       <div class="row">
         <div class="col-md-4">
-          <img @click="toHomePage" id="logo-fixed" src="../assets/logo.png" alt="BitStored logo">
+          <router-link to="/"><img id="logo-fixed" src="../assets/logo.png" alt="BitStored logo"></router-link>
         </div>
         <div class="col-md-6" id="slogan">
           <h2>A secure solution for your data</h2>
@@ -23,21 +23,21 @@
 </template>
 
 <script>
-document.addEventListener("scroll", () => {
+document.addEventListener('scroll', () => {
   if (document.documentElement.scrollTop >= 60) {
-    document.getElementById("header-nav").classList.add("fixed-header");
-    document.getElementById("header-title").classList.add("visible-title");
-    document.getElementById("sidebar").style.top = "60px";
+    document.getElementById('header-nav').classList.add('fixed-header')
+    document.getElementById('header-title').classList.add('visible-title')
+    // document.getElementById('sidebar').style.top = '60px'
   } else {
-    document.getElementById("header-nav").classList.remove("fixed-header");
-    document.getElementById("header-title").classList.remove("visible-title");
-    document.getElementById("sidebar").style.top = "0";
+    document.getElementById('header-nav').classList.remove('fixed-header')
+    document.getElementById('header-title').classList.remove('visible-title')
+    // document.getElementById('sidebar').style.top = '0'
   }
-});
+})
 
 export default {
-  name: "BitsHeader"
-};
+  name: 'BitsHeader'
+}
 </script>
 
 <style>

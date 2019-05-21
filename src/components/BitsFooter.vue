@@ -7,8 +7,12 @@
 </template>
 
 <script>
+import { VueAdsBar } from 'vue-ads-layout'
 export default {
-  name: 'BitsFooter'
+  name: 'BitsFooter',
+  components: {
+    VueAdsBar
+  }
 }
 </script>
 

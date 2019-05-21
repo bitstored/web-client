@@ -13,18 +13,18 @@
 
 <script>
 export default {
-  name: "BitsSideBar"
-};
+  name: 'BitsSideBar'
+}
 </script>
 
 <style>
 nav {
   white-space: nowrap;
   background: #37474f;
-  position: relative;
-  top: 0;
+  position: fixed;
+  top: 65px;
   height: 100%;
-  width: 30%;
+  width: 15%;
 }
 nav ul {
   list-style: none;

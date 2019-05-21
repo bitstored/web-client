@@ -20,16 +20,16 @@
 </template>
 
 <script>
-import BitsHeader from "../components/BitsHeader";
-import BitsFooter from "../components/BitsFooter";
-import BitsSideBar from "../components/BitsSideBar";
+import BitsHeader from '../components/BitsHeader'
+import BitsFooter from '../components/BitsFooter'
+import BitsSideBar from '../components/BitsSideBar'
 
 export default {
-  name: "DefaultLayout",
+  name: 'DefaultLayout',
   components: {
     BitsHeader,
     BitsFooter,
     BitsSideBar
   }
-};
+}
 </script>

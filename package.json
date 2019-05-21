@@ -19,6 +19,7 @@
     "popper.js": "^1.15.0",
     "protoc-gen-grpc-web": "^1.0.5",
     "vue": "^2.5.2",
+    "vue-ads-layout": "^1.4.6",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
