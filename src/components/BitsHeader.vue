@@ -3,14 +3,17 @@
     <div class="header-banner" id="header-fixed">
       <div class="row">
         <div class="col-md-4">
-          <img id="logo-fixed" src="../assets/logo.png" alt="BitStored logo">
+          <img @click="toHomePage" id="logo-fixed" src="../assets/logo.png" alt="BitStored logo">
         </div>
-        <div class="col-md-8">
-          <h3>Secure solution to store your data</h3>
+        <div class="col-md-6" id="slogan">
+          <h2>A secure solution for your data</h2>
+        </div>
+        <div class="col-md-2" id="login-buttons">
+          <router-link to="/login">Login</router-link>|
+          <router-link to="/register">Register</router-link>
         </div>
       </div>
     </div>
-    <div class="clear"></div>
     <div class="header-nav" id="header-nav">
       <div class="header-title" id="header-title">
         <img id="logo" src="../assets/logo.png" alt="BitStored logo">
@@ -20,21 +23,21 @@
 </template>
 
 <script>
-document.addEventListener('scroll', () => {
-  if (document.documentElement.scrollTop >= 90) {
-    document.getElementById('header-nav').classList.add('fixed-header')
-    document.getElementById('header-title').classList.add('visible-title')
-    document.getElementById('sidebar').style.top = '60px'
+document.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop >= 60) {
+    document.getElementById("header-nav").classList.add("fixed-header");
+    document.getElementById("header-title").classList.add("visible-title");
+    document.getElementById("sidebar").style.top = "60px";
   } else {
-    document.getElementById('header-nav').classList.remove('fixed-header')
-    document.getElementById('header-title').classList.remove('visible-title')
-    document.getElementById('sidebar').style.top = '0'
+    document.getElementById("header-nav").classList.remove("fixed-header");
+    document.getElementById("header-title").classList.remove("visible-title");
+    document.getElementById("sidebar").style.top = "0";
   }
-})
+});
 
 export default {
-  name: 'BitsHeader'
-}
+  name: "BitsHeader"
+};
 </script>
 
 <style>
@@ -75,6 +78,10 @@ header {
   visibility: visible !important;
 }
 
+#slogan {
+  color: #555555;
+  align-self: center;
+}
 #logo {
   max-width: 300px;
   height: auto;
@@ -91,6 +98,10 @@ header {
 }
 h3 {
   align-content: center;
+  color: #555555;
+}
+#login-buttons {
+  align-self: center;
   color: #555555;
 }
 </style>

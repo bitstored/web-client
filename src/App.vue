@@ -11,13 +11,15 @@
 
 <script>
 import FirstPage from "./pages/FirstPage";
-import DefaultLayout from "./layouts/DefaultLayout";
+import About from "./pages/About";
 
+import DefaultLayout from "./layouts/DefaultLayout";
 export default {
   name: "App",
   components: {
     FirstPage,
-    DefaultLayout
+    DefaultLayout,
+    About
   }
 };
 </script>

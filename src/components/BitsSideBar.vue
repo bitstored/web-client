@@ -7,14 +7,13 @@
       <li>
         <router-link to="/about">About</router-link>
       </li>
-      <li>Secure solution to store your data</li>
     </ul>
   </nav>
 </template>
 
 <script>
 export default {
-  name: 'BitsSideBar'
+  name: "BitsSideBar"
 };
 </script>
 
@@ -22,8 +21,10 @@ export default {
 nav {
   white-space: nowrap;
   background: #37474f;
-  position: sticky;
+  position: relative;
   top: 0;
+  height: 100%;
+  width: 30%;
 }
 nav ul {
   list-style: none;
