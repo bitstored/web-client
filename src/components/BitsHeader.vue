@@ -5,18 +5,18 @@
         <div class="col-md-4">
           <router-link to="/"><img id="logo-fixed" src="../assets/logo.png" alt="BitStored logo"></router-link>
         </div>
-        <div class="col-md-6" id="slogan">
+        <div class='col-md-6' id='slogan'>
           <h2>A secure solution for your data</h2>
         </div>
-        <div class="col-md-2" id="login-buttons">
-          <router-link to="/login">Login</router-link>|
-          <router-link to="/register">Register</router-link>
+        <div class='col-md-2' id='login-buttons'>
+          <router-link to='/login'>Login</router-link>|
+          <router-link to='/register'>Register</router-link>
         </div>
       </div>
     </div>
-    <div class="header-nav" id="header-nav">
-      <div class="header-title" id="header-title">
-        <img id="logo" src="../assets/logo.png" alt="BitStored logo">
+    <div class='header-nav' id='header-nav'>
+      <div class='header-title' id='header-title'>
+        <img id='logo' src='../assets/logo.png' alt='BitStored logo'>
       </div>
     </div>
   </header>
@@ -27,11 +27,10 @@ document.addEventListener('scroll', () => {
   if (document.documentElement.scrollTop >= 60) {
     document.getElementById('header-nav').classList.add('fixed-header')
     document.getElementById('header-title').classList.add('visible-title')
-    // document.getElementById('sidebar').style.top = '60px'
+    document.getElementById('sidebar').style.top = '60px'
   } else {
     document.getElementById('header-nav').classList.remove('fixed-header')
     document.getElementById('header-title').classList.remove('visible-title')
-    // document.getElementById('sidebar').style.top = '0'
   }
 })
 
@@ -45,7 +44,7 @@ header {
   width: 100%;
 }
 .header-banner {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -65,6 +64,7 @@ header {
   position: fixed;
   background: #eeeeee;
   height: 60px;
+  z-index: 1;
 }
 .header-nav div {
   font-size: 2rem;
