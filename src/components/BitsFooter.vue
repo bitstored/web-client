@@ -1,5 +1,8 @@
 <template>
-  <vue-ads-bar id="footer" slot="footer" :footer="true">
+  <vue-ads-bar
+    id="footer"
+    slot="footer"
+    :footer="true">
     <div>
       <h1>footer</h1>
     </div>

@@ -6,7 +6,7 @@
     <default-layout>
       <div class="Home">
         <div class="container">
-          <router-view></router-view>
+          <router-view/>
         </div>
       </div>
     </default-layout>
@@ -33,16 +33,16 @@ export default {
       alert: state => state.alert
     })
   },
+  watch: {
+    $route (to, from) { // eslint-disable-line no-unused-vars
+      // clear alert on location change
+      this.clearAlert()
+    }
+  },
   methods: {
     ...mapActions({
       clearAlert: 'alert/clear'
     })
-  },
-  watch: {
-    $route (to, from) {
-      // clear alert on location change
-      this.clearAlert()
-    }
   }
 }
 </script>

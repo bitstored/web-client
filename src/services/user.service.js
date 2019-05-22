@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 // import config from 'config'
 import { authHeader } from '../router'
+import { LoginRequest, LoginResponse } from '../pb/user-service_pb'
+import { AccountClient } from '../pb/user-service_grpc_web_pb'
 
 export const userService = {
   login,
@@ -12,12 +14,19 @@ export const userService = {
   delete: _delete
 }
 
+
 function login(username, password) {
-  const requestOptions = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, password })
-  }
+  const accountClient = AccountClient('http://localhost:8080', JSON.stringify({ username, password }), {})
+  const request = LoginRequest({
+    username,
+    password
+  })
+  accountClient.login(request, {}, console.log) //eslint-disable-line
+  // const requestOptions = {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify({ username, password })
+  // }
 
   // return fetch(`${config.apiUrl}/users/authenticate`, requestOptions)
   //     .then(handleResponse)

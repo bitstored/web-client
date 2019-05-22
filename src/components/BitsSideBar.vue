@@ -1,5 +1,8 @@
 <template>
-  <nav class="App__nav" id="sidebar" slot="sidebar">
+  <nav
+    id="sidebar"
+    slot="sidebar"
+    class="App__nav">
     <ul>
       <li>
         <router-link to="/">Home</router-link>

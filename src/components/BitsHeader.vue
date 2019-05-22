@@ -1,22 +1,38 @@
 <template>
   <header slot="toolbar">
-    <div class="header-banner" id="header-fixed">
+    <div
+      id="header-fixed"
+      class="header-banner">
       <div class="row">
         <div class="col-md-4">
-          <router-link to="/"><img id="logo-fixed" src="../assets/logo.png" alt="BitStored logo"></router-link>
+          <router-link to="/"><img
+            id="logo-fixed"
+            src="../assets/logo.png"
+            alt="BitStored logo"></router-link>
         </div>
-        <div class='col-md-6' id='slogan'>
+        <div
+          id="slogan"
+          class="col-md-6">
           <h2>A secure solution for your data</h2>
         </div>
-        <div class='col-md-2' id='login-buttons'>
-          <router-link to='/login'>Login</router-link>|
-          <router-link to='/register'>Register</router-link>
+        <div
+          id="login-buttons"
+          class="col-md-2">
+          <router-link to="/login">Login</router-link>|
+          <router-link to="/register">Register</router-link>
         </div>
       </div>
     </div>
-    <div class='header-nav' id='header-nav'>
-      <div class='header-title' id='header-title'>
-        <img id='logo' src='../assets/logo.png' alt='BitStored logo'>
+    <div
+      id="header-nav"
+      class="header-nav">
+      <div
+        id="header-title"
+        class="header-title">
+        <img
+          id="logo"
+          src="../assets/logo.png"
+          alt="BitStored logo">
       </div>
     </div>
   </header>

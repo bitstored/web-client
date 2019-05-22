@@ -1,20 +1,20 @@
 <template>
-  <div class='DefaultLayout'>
-    <div class='row'>
-      <bits-header></bits-header>
+  <div class="DefaultLayout">
+    <div class="row">
+      <bits-header/>
     </div>
-    <div class='row'>
-      <div class='col-md-4'>
-        <bits-side-bar></bits-side-bar>
+    <div class="row">
+      <div class="col-md-4">
+        <bits-side-bar/>
       </div>
-      <div class='col-md-8'>
-        <main class='DefaultLayoutMain'>
+      <div class="col-md-8">
+        <main class="DefaultLayoutMain">
           <slot/>
         </main>
       </div>
     </div>
-    <div class='row'>
-      <bits-footer></bits-footer>
+    <div class="row">
+      <bits-footer/>
     </div>
   </div>
 </template>
