@@ -17,8 +17,9 @@
 import { VueAdsLayout } from 'vue-ads-layout'
 import FirstPage from './pages/FirstPage'
 import About from './pages/About'
-
+import { mapState, mapActions } from 'vuex'
 import DefaultLayout from './layouts/DefaultLayout'
+
 export default {
   name: 'App',
   components: {
@@ -26,6 +27,22 @@ export default {
     DefaultLayout,
     About,
     VueAdsLayout
+  },
+  computed: {
+    ...mapState({
+      alert: state => state.alert
+    })
+  },
+  methods: {
+    ...mapActions({
+      clearAlert: 'alert/clear'
+    })
+  },
+  watch: {
+    $route (to, from) {
+      // clear alert on location change
+      this.clearAlert()
+    }
   }
 }
 </script>
