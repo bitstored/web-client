@@ -5,6 +5,7 @@
       <div class="form-group">
         <label for="username">Username</label>
         <input
+          id="username"
           v-model="username"
           :class="{ 'is-invalid': submitted && !username }"
           type="text"
@@ -21,6 +22,7 @@
       <div class="form-group">
         <label htmlFor="password">Password</label>
         <input
+          id="password"
           v-model="password"
           :class="{ 'is-invalid': submitted && !password }"
           type="password"
@@ -65,7 +67,6 @@
 </template>
 
 <script>
-//
 import { mapState, mapActions} from 'vuex'
 
 export default {
@@ -86,7 +87,7 @@ export default {
   },
   methods: {
     ...mapActions('account', ['login', 'logout']),
-    handleSubmit () {
+    handleSubmit() {
       this.submitted = true
       const { username, password } = this
 

@@ -1,16 +1,15 @@
 /* eslint-disable no-unused-vars */
 // import config from 'config'
 import { authHeader } from '../router'
-import { LoginRequest, LoginResponse } from '../pb/user_service_pb'
-import { AccountClient }  from '../pb/user_service_pb'
+
+const { LoginRequest, LoginResponse } = require('../pb/user_service_pb')
+const { AccountClient } = require('../pb/user_service_grpc_web_pb')
 
 export const userService = {
   methods : {
     login: function(username, password) {
 
-      this.client = new AccountClient('http://localhost:5008', {}, {})
-
-      alert('ce plmerftrewrtghy')
+      const client = new AccountClient('http://localhost:5008', {}, {})
 
       const request = LoginRequest({
         username,
@@ -21,7 +20,7 @@ export const userService = {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
       }
-      client.login(request, requestOptions, console.log()) //eslint-disable-line
+      client.login(request, requestOptions, () => {}) //eslint-disable-line
 
 
       // return fetch(`${config.apiUrl}/users/authenticate`, requestOptions)

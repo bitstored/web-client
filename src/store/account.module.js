@@ -10,7 +10,7 @@ const state = user
 const actions = {
   login({ dispatch, commit }, { username, password }) {
     commit('loginRequest', { username })
-    userService.login(username, password)
+    userService.methods.login(username, password)
       .then(
         user => {
           commit('loginSuccess', user)
@@ -23,7 +23,7 @@ const actions = {
       )
   },
   logout({ commit }) {
-    userService.logout()
+    userService.methods.logout()
     commit('logout')
   },
   register({ dispatch, commit }, user) {
