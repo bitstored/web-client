@@ -11,10 +11,9 @@ export const userService = {
 
       const client = new AccountClient('http://localhost:5008', {}, {})
 
-      const request = LoginRequest({
-        username,
-        password
-      })
+      const request = new LoginRequest()
+      request.setUsername(username)
+      request.setPassword(password)
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
