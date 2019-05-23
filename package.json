@@ -19,9 +19,11 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "protoc-gen-grpc-web": "^1.0.5",
+    "vee-validate": "^2.2.7",
     "vue": "^2.5.2",
     "vue-ads-layout": "^1.4.6",
     "vue-router": "^3.0.1",
+    "vue-tel-input": "^2.1.5",
     "vuex": "^3.1.1"
   },
   "devDependencies": {

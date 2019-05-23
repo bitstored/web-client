@@ -2,12 +2,13 @@
   <vue-ads-bar
     id="footer"
     slot="footer"
-    :footer="true">
+  >
     <div>
       <h1>footer</h1>
     </div>
   </vue-ads-bar>
 </template>
+  <!-- :footer="true" -->
 
 <script>
 import { VueAdsBar } from 'vue-ads-layout'
@@ -19,6 +20,7 @@ export default {
 }
 </script>
 
+// :footer="true"
 <style>
 #footer {
   left: 0;

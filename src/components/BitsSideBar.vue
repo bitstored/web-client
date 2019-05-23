@@ -2,13 +2,18 @@
   <nav
     id="sidebar"
     slot="sidebar"
-    class="App__nav">
+    class="App__nav"
+  >
     <ul>
       <li>
-        <router-link to="/">Home</router-link>
+        <router-link to="/">
+          Home
+        </router-link>
       </li>
       <li>
-        <router-link to="/about">About</router-link>
+        <router-link to="/about">
+          About
+        </router-link>
       </li>
     </ul>
   </nav>

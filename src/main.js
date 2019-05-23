@@ -5,11 +5,15 @@ import App from './App'
 import { router } from './router'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-Vue.config.productionTip = false
+import { store } from './store'
+import VeeValidate from 'vee-validate'
 
+Vue.use(VeeValidate)
+Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })

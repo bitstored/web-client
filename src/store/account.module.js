@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import { userService } from '../_services'
-import { router } from '../_helpers'
+import { userService } from '../services'
+import { router } from '../router'
 
 const user = JSON.parse(localStorage.getItem('user'))
 const state = user
@@ -10,7 +10,6 @@ const state = user
 const actions = {
   login({ dispatch, commit }, { username, password }) {
     commit('loginRequest', { username })
-
     userService.login(username, password)
       .then(
         user => {

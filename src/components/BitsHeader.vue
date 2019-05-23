@@ -2,37 +2,49 @@
   <header slot="toolbar">
     <div
       id="header-fixed"
-      class="header-banner">
+      class="header-banner"
+    >
       <div class="row">
         <div class="col-md-4">
-          <router-link to="/"><img
-            id="logo-fixed"
-            src="../assets/logo.png"
-            alt="BitStored logo"></router-link>
+          <router-link to="/">
+            <img
+              id="logo-fixed"
+              src="../assets/logo.png"
+            >
+          </router-link>
         </div>
         <div
           id="slogan"
-          class="col-md-6">
+          class="col-md-6"
+        >
           <h2>A secure solution for your data</h2>
         </div>
         <div
           id="login-buttons"
-          class="col-md-2">
-          <router-link to="/login">Login</router-link>|
-          <router-link to="/register">Register</router-link>
+          class="col-md-2"
+        >
+          <router-link to="/login">
+            Login
+          </router-link>|
+          <router-link to="/register">
+            Register
+          </router-link>
         </div>
       </div>
     </div>
     <div
       id="header-nav"
-      class="header-nav">
+      class="header-nav"
+    >
       <div
         id="header-title"
-        class="header-title">
+        class="header-title"
+      >
         <img
           id="logo"
           src="../assets/logo.png"
-          alt="BitStored logo">
+          alt="BitStored logo"
+        >
       </div>
     </div>
   </header>

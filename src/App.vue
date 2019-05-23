@@ -1,8 +1,5 @@
-
 <template>
-  <vue-ads-layout
-    :full-bar="false"
-  >
+  <vue-ads-layout >
     <default-layout>
       <div class="Home">
         <div class="container">
@@ -12,10 +9,14 @@
     </default-layout>
   </vue-ads-layout>
 </template>
+  <!-- :full-bar="false" -->
 
 <script>
+
 import { VueAdsLayout } from 'vue-ads-layout'
 import FirstPage from './pages/FirstPage'
+import Login from './pages/Login'
+
 import About from './pages/About'
 import { mapState, mapActions } from 'vuex'
 import DefaultLayout from './layouts/DefaultLayout'
@@ -26,6 +27,7 @@ export default {
     FirstPage,
     DefaultLayout,
     About,
+    Login,
     VueAdsLayout
   },
   computed: {
